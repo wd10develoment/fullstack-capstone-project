@@ -1,0 +1,15 @@
+name: node # This will become the name of your environment
+channels:
+  - default
+  - conda-forge
+dependencies: # The list of packages to include in your environment
+  - python=3.12 # You can specify versions
+  - flask
+  - pip # Install pip in your environment
+  - selenium # Selenium is an umbrella project for a range of tools and lipandasssssssssssbraries that enable and support the automation of web browsers.
+  - pandas
+  - flask_cors
+  - nodejs = 22
+  - pip:
+      - flask-jwt-extended
+      - requests
