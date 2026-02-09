@@ -30,7 +30,7 @@ function LoginPage() {
                 type="text"
                 className="form-control"
                 placeholder="Enter your email"
-                value={email}
+                value={Email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -43,7 +43,7 @@ function LoginPage() {
                 type="password"
                 className="form-control"
                 placeholder="Enter your password"
-                value={password}
+                value={Password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>

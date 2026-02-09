@@ -22,6 +22,19 @@ export default function Navbar() {
             </a>{" "}
             {/* Updated Link */}
           </li>
+
+          <li className="nav-item">
+            <a className="nav-link" href="/app/register">
+              register
+            </a>{" "}
+            {/* Updated Link */}
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/app/login">
+              login
+            </a>{" "}
+            {/* Updated Link */}
+          </li>
         </ul>
       </div>
     </nav>
