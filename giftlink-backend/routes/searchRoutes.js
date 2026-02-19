@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const connectToDatabase = require("../models/db");
+// {Insert it along with other imports} Task 1: Use the `body`,`validationResult` from `express-validator` for input validation
+const { body, validationResult } = require("express-validator");
 
 // Search for gifts
 router.get("/", async (req, res, next) => {
@@ -16,7 +18,7 @@ router.get("/", async (req, res, next) => {
     let query = {};
 
     // Add the name filter to the query if the name parameter is not empty
-    if (req.query.name > req.query.name && req.query.name.trim() !== "") {
+    if (req.query.name.trim() !== "") {
       query.name = { $regex: req.query.name, $options: "i" }; // Using regex for partial match, case-insensitive
     }
 
@@ -36,7 +38,7 @@ router.get("/", async (req, res, next) => {
 
     // Task 4: Fetch filtered gifts using the find(query) method. Make sure to use await and store the result in the `gifts` constant
     // {{insert code here here}}
-    await collection.find(query).toArray();
+    const gifts = await collection.find(query).toArray();
 
     res.json(gifts);
   } catch (e) {
